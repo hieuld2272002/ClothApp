@@ -3,6 +3,7 @@ import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignInScreen from '../Screens/SignInScreen';
 import SignUpScreen from '../Screens/SignUpScreen';
+import BottonNavigation from './BottonNavigation';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,11 @@ const RootNavigation = () => {
         options={{
           headerShown: false,
         }}
+      />
+      <Stack.Screen
+        name="BottonNavigation"
+        component={BottonNavigation}
+        options={{headerShown: false}}
       />
     </Stack.Navigator>
   );

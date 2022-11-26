@@ -3,10 +3,14 @@ import React from 'react';
 import {Color} from '../../global/StyleGlobal';
 import {Button} from 'react-native-elements';
 
-const ButtonAuth = ({Title}) => {
+const ButtonAuth = ({Title, navigation, NavigateWhere}) => {
   return (
     <View style={styles.ButtonContailer}>
-      <Button title={Title} buttonStyle={styles.buttonStyle} />
+      <Button
+        onPress={() => navigation.navigate(NavigateWhere)}
+        title={Title}
+        buttonStyle={styles.buttonStyle}
+      />
     </View>
   );
 };

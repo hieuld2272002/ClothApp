@@ -6,4 +6,5 @@ export const Color = {
 };
 export const Fonts = {
   Inter: 'Inter',
+  Playfair: 'Playfair Display',
 };

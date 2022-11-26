@@ -34,7 +34,11 @@ const SignInScreen = ({navigation}) => {
       </View>
       {/* Button View */}
       <View style={{marginTop: 60}}>
-        <ButtonAuth Title="Đăng nhập" />
+        <ButtonAuth
+          Title="Đăng nhập"
+          navigation={navigation}
+          NavigateWhere="BottonNavigation"
+        />
       </View>
       {/* SignInScreen Press */}
       <View style={{marginTop: 52}}>
