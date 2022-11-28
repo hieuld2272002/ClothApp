@@ -3,6 +3,8 @@ import React from 'react';
 import {NavigationContainer, DefaultTheme} from '@react-navigation/native';
 import RootNavigation from './src/Navigations/RootNavigation';
 import {Color} from './src/global/StyleGlobal';
+import {Provider} from 'react-redux';
+import store from './src/redux/store';
 const App = () => {
   const MyTheme = {
     ...DefaultTheme,
@@ -14,7 +16,9 @@ const App = () => {
 
   return (
     <NavigationContainer theme={MyTheme}>
-      <RootNavigation />
+      <Provider store={store}>
+        <RootNavigation />
+      </Provider>
     </NavigationContainer>
   );
 };
